@@ -24,6 +24,35 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
+    <!--<link rel="stylesheet" type="text/css" href="ResponsiveImageGallery/css/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="ResponsiveImageGallery/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="ResponsiveImageGallery/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="ResponsiveImageGallery/css/elastislide.css" />
+
+    <noscript>
+        <style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+    </noscript>
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
 </head>
 
 <body id="page-top">
@@ -378,35 +407,43 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="img/gallery/g1.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/gallery/g2.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/gallery/g3.jpg" alt="Third slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid" src="img/gallery/g4.jpg" alt="Fourth slide">
+                <div id="rg-gallery" class="rg-gallery">
+                    <div class="rg-thumbs">
+                        <div class="es-carousel-wrapper">
+                            <div class="es-nav">
+                                <span class="es-nav-prev">Previous</span>
+                                <span class="es-nav-next">Next</span>
+                            </div>
+                            <div class="es-carousel">
+                                <ul>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/1.jpg" data-large="ResponsiveImageGallery/images/1.jpg" alt="image01"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/2.jpg" data-large="ResponsiveImageGallery/images/2.jpg" alt="image02"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/3.jpg" data-large="ResponsiveImageGallery/images/3.jpg" alt="image03"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/4.jpg" data-large="ResponsiveImageGallery/images/4.jpg" alt="image04"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/5.jpg" data-large="ResponsiveImageGallery/images/5.jpg" alt="image05"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/6.jpg" data-large="ResponsiveImageGallery/images/6.jpg" alt="image06"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/7.jpg" data-large="ResponsiveImageGallery/images/7.jpg" alt="image07"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/8.jpg" data-large="ResponsiveImageGallery/images/8.jpg" alt="image08"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/9.jpg" data-large="ResponsiveImageGallery/images/9.jpg" alt="image09"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/10.jpg" data-large="ResponsiveImageGallery/images/10.jpg" alt="image10"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/11.jpg" data-large="ResponsiveImageGallery/images/11.jpg" alt="image11"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/12.jpg" data-large="ResponsiveImageGallery/images/12.jpg" alt="image12"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/13.jpg" data-large="ResponsiveImageGallery/images/13.jpg" alt="image13"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/14.jpg" data-large="ResponsiveImageGallery/images/14.jpg" alt="image14"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/15.jpg" data-large="ResponsiveImageGallery/images/15.jpg" alt="image15"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/16.jpg" data-large="ResponsiveImageGallery/images/16.jpg" alt="image16"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/17.jpg" data-large="ResponsiveImageGallery/images/17.jpg" alt="image17"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/18.jpg" data-large="ResponsiveImageGallery/images/18.jpg" alt="image18"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/19.jpg" data-large="ResponsiveImageGallery/images/19.jpg" alt="image19"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/20.jpg" data-large="ResponsiveImageGallery/images/20.jpg" alt="image20"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/21.jpg" data-large="ResponsiveImageGallery/images/21.jpg" alt="image21"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/22.jpg" data-large="ResponsiveImageGallery/images/22.jpg" alt="image22"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/23.jpg" data-large="ResponsiveImageGallery/images/23.jpg" alt="image23"/></a></li>
+                                    <li><a href="#"><img src="ResponsiveImageGallery/images/thumbs/24.jpg" data-large="ResponsiveImageGallery/images/24.jpg" alt="image24"/></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>-->
                 </div>
             </div>
         </div>
@@ -762,6 +799,12 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/rpr.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="ResponsiveImageGallery/js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="ResponsiveImageGallery/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="ResponsiveImageGallery/js/jquery.elastislide.js"></script>
+<script type="text/javascript" src="ResponsiveImageGallery/js/gallery.js"></script>
 
 </body>
 
